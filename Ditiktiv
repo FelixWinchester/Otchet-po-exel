@@ -3,7 +3,7 @@ using namespace std;
 
 int main() {
     setlocale(LC_ALL, "Russian");
-    int a, n, fonarik = 0, gilotina=0;
+    int a, n, fonarik = 0;
     cout << " 23:45 12.7.2022 Полицейский участок Abobus City. Винсент сидит в пустом главном зале и ждёт завершения рабочей смены, как вдруг свет резко гаснет "
        "и некоторые выходы блокируются. Остались открытыми 5 дверей:" << endl;
 vibor:
