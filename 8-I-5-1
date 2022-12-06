@@ -16,8 +16,7 @@ int main() {
 	cin >> a >> b;
 
 	i = sueta(a, b);
-	c = a / b;
-	o = (double) c / (double)i;
 	
-	cout << o;
+	cout << a/i << "/" << b/i;
 	}
+}
