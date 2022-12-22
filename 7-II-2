@@ -1,0 +1,26 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+    string s, s0;
+    char c;
+
+    locale::global(locale("Russian"));
+    cout << "Введите строку S: ";
+    getline(cin, s);
+    cout << "Введите строку S0: ";
+    getline(cin, s0);
+    cout << "Введите символ С: ";
+    cin >> c;
+
+    string result;
+    for (size_t i = 0; i < s.length(); i++) {
+        result += s[i];
+        if (s[i] == c) {
+            result += s0;
+        }
+    }
+    cout << "Результирующая строка: \"" << result << "\"" << endl;
+    system("pause");
+}
