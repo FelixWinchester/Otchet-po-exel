@@ -1,25 +1,38 @@
 #include <iostream>
-using namespace std;
-int main() {
-	int n, m, k1, k2, s = 0;
-	cin >> n >> m;
-	cin >> k1 >> k2;
-	int** a = new int* [n];
-	for (int i = 0; i < n; i++) {
-		a[i] = new int[m];
-	}
-	for (int i = 0; i < n; i++) {
-		for (int j = 0; j < m; j++) {
-			cin >> a[i][j];
-		}
-	}
-	for (int i = 0; i < n; i++) {
-		for (int j = 0; j < n; j++) {
-			if (j >= k1 && j <= k2) {
-				s += a[i][j];
 
-			}
-		}
-	}
-	cout << s;
+using namespace std;
+
+int main(){
+    int **matrix;
+    int n, m;
+    setlocale(LC_ALL, "Russian");
+    cout << "Введите n m\n";
+    cin >> n >> m;
+    cout << "Введите k1, k2\n";
+    int k1, k2;
+    cin >> k1 >> k2;
+    int *ans = new int[m];
+    for (int i = 0; i < m; i++)
+        ans[i] = 1;
+
+    matrix = new int *[n];
+    for (int i = 0; i < n; i++)
+        matrix[i] = new int[m];
+    
+    cout << "Введите массив по строчкам\n";
+    for (int i = 0; i < n; i++)
+        for (int j = 0; j < m; j++)
+            cin >> matrix[i][j];
+
+    for (int j = 0; j < m; j++){
+        for (int i = k1; i <= k2; i++){
+            ans[j]*=matrix[i][j];
+        }
+    }
+
+
+
+    for (int i = 0; i < m; i++){
+        cout << ans[i] << " ";
+    }
 }
