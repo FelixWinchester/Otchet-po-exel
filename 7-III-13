@@ -7,11 +7,11 @@ int main()
     char c;
 
     setlocale(LC_ALL, "Russian");
-    cout << "Введите строку ";
+    cout << "Введите строку S: ";
     getline(cin, s);
     cout << "Введите символ: ";
     getline(cin, s0);
-    cout << "Введите букву: ";
+    cout << "Введите слово: ";
     cin >> c;
 
     string result;
@@ -21,6 +21,6 @@ int main()
             result += s0;
         }
     }
-    cout << "Результат \"" << result << "\"" << endl;
+    cout << "Результирующая строка: \"" << result << "\"" << endl;
     system("pause");
 }
