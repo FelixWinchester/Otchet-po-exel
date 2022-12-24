@@ -1,4 +1,4 @@
-/*
+
 #include <iostream>
 using namespace std;
 int main() {
@@ -6,12 +6,12 @@ int main() {
     cin >> a >> b;
     for (i = a; i <= b; i++) {
         if (i % 3 == 0) {
-            cout << "Hui= " << i << endl;
+            cout << "Opa= " << i << endl;
         }
     }
 }
-*/
-/*
+
+
 #include <iostream>
 using namespace std;
 int main() {
@@ -25,8 +25,8 @@ int main() {
         i++;
     }
 }
-*/
-/*
+
+
 #include <iostream>
 using namespace std;
 int main() {
@@ -41,4 +41,4 @@ int main() {
     } 
     while (i <= b); 
 }
-*/
+
