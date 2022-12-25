@@ -18,5 +18,4 @@ int main() {
 	i = sueta(a, b);
 	
 	cout << a/i << "/" << b/i;
-	}
 }
