@@ -1,26 +1,27 @@
-#include <iostream>
-#include <string>
+#include "iostream"
+#include "string"
+#include<conio.h>
 using namespace std;
+
 int main()
 {
-    string s, s0;
-    char c;
-
-    setlocale(LC_ALL, "Russian");
-    cout << "Введите строку S: ";
-    getline(cin, s);
-    cout << "Введите символ: ";
-    getline(cin, s0);
-    cout << "Введите слово: ";
-    cin >> c;
-
-    string result;
-    for (size_t i = 0; i < s.length(); i++) {
-        result += s[i];
-        if (s[i] == c) {
-            result += s0;
-        }
+    string str, str1, str2;
+    string::size_type k = 0, pos = 0;
+    cout << "Enter string\n" << endl; // str1 str2
+    getline(cin, str);
+    cout << "Enter str1\n" << endl;
+    cin >> str1;
+    cout << "Enter str2\n" << endl;
+    cin >> str2;
+    k = str.find(str1, pos);
+    int j = str1.length();
+    while (k != string::npos)
+    {
+        str.insert(k + j, ' '+ str2);
+        pos = k + j + 3;
+        k = str.find(str1, pos);
     }
-    cout << "Результирующая строка: \"" << result << "\"" << endl;
-    system("pause");
+    cout << str << endl;
+    return 0;
+
 }
