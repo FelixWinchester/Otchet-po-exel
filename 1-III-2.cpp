@@ -5,9 +5,6 @@ int main() {
 	setlocale(LC_ALL, "Russian");
 	int x;
 	cin >> x;
-	if (x % 2)
-	 cout << "Число Нечётное";
-else 
-cout << "Число чётное";
-return 0;
+    x % 2==0 ? cout << "chetnoe" : cout << "nechetnoe";
+	
 }
